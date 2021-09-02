@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Forms-Reactive": {
+    "Form-Active": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Forms-Reactive",
+            "outputPath": "dist/Form-Active",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -37,13 +33,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ],
               "fileReplacements": [
@@ -69,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Forms-Reactive:build:production"
+              "browserTarget": "Form-Active:build:production"
             },
             "development": {
-              "browserTarget": "Forms-Reactive:build:development"
+              "browserTarget": "Form-Active:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Forms-Reactive:build"
+            "browserTarget": "Form-Active:build"
           }
         },
         "test": {
@@ -103,5 +99,5 @@
       }
     }
   },
-  "defaultProject": "Forms-Reactive"
+  "defaultProject": "Form-Active"
 }
