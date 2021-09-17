@@ -1,0 +1,85 @@
+https://ng-complete-guide-7f430.web.app/recipes
+
+
+
+angular.json update
+
+"build": {
+        
+   "outputPath":   -->   "outputPath": "public",
+
+
+firebase.json
+
+   "public":	-->  "public": "public",
+
+
+ng build --prod
+firebase init
+firebase deploy
+
+
+firebase init
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Moock_ANGULAR_FPT\angular_practice\Angular_Practice\project-http-recipe
+
+? Are you ready to proceed? Yes
+? Which Firebase features do you want to set up for this directory? Press Space to select features, then Enter to confirm your choices. Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys
+
+=== Project Setup
+
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add,
+but for now we'll just set up a default project.
+
+? Please select an option: Don't set up a default project
+
+=== Hosting Setup
+
+Your public directory is the folder (relative to your project directory) that
+will contain Hosting assets to be uploaded with firebase deploy. If you
+have a build process for your assets, use your build's output directory.
+? Configure as a single-page app (rewrite all urls to /index.html)? Yes      
+? Set up automatic builds and deploys with GitHub? No
++  Wrote public/index.html
+
+i  Writing configuration info to firebase.json...
+i  Writing project information to .firebaserc...
+
++  Firebase initialization complete!
+PS E:\Moock_ANGULAR_FPT\angular_practice\Angular_Practice\project-http-recipe> ng build --prod
+Your global Angular CLI version (12.1.3) is greater than your local version (9.1.15). The local Angular CLI version is used.
+
+To disable this warning use "ng config -g cli.warnings.versionMismatch false".
+
+chunk {} runtime.d72a840b2a5028bf045b.js (runtime) 2.3 kB [entry] [rendered]
+chunk {1} 1.4797b035c58d72975256.js () 64.5 kB  [rendered]
+chunk {2} main.b33ab1b19daec12e8dc1.js (main) 295 kB [initial] [rendered]   
+chunk {3} polyfills.0d6198dad2d29f868168.js (polyfills) 44.2 kB [initial] [rendered]
+chunk {5} styles.d429b4c98ad9a96c4a73.css (styles) 112 kB [initial] [rendered]
+chunk {6} 6.1cfc1c70707883628c99.js () 5.62 kB  [rendered]
+chunk {7} 7.b07b1ca4090370a7f9df.js () 10.5 kB  [rendered]
+chunk {8} 8.a0fe2820e5f7c32761ba.js () 4.11 kB  [rendered]
+Date: 2021-09-17T13:46:42.178Z - Hash: 44535c8f1377237d9a18 - Time: 46161ms
+
+WARNING in E:\Moock_ANGULAR_FPT\angular_practice\Angular_Practice\project-http-recipe\src\environments\environment.prod.ts is part of the TypeScript compilation but it's unused.
+Add only entry points to the 'files' or 'include' properties in your tsconfig.
+PS E:\Moock_ANGULAR_FPT\angular_practice\Angular_Practice\project-http-recipe> firebase deploy
+
+=== Deploying to 'ng-complete-guide-7f430'...
+
+i  deploying hosting
+i  hosting[ng-complete-guide-7f430]: beginning deploy...
+i  hosting[ng-complete-guide-7f430]: found 17 files in public
++  hosting[ng-complete-guide-7f430]: file upload complete
+i  hosting[ng-complete-guide-7f430]: finalizing version...
++  hosting[ng-complete-guide-7f430]: version finalized
+i  hosting[ng-complete-guide-7f430]: releasing new version...
++  hosting[ng-complete-guide-7f430]: release complete
+
++  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/ng-complete-guide-7f430/overview
+Hosting URL: https://ng-complete-guide-7f430.web.app
